@@ -1,0 +1,20 @@
+sudo ovs-ofctl add-flow s1 priority=1,in_port=1,actions=output:2
+sudo ovs-ofctl add-flow s2 priority=1,in_port=1,actions=output:3
+sudo ovs-ofctl add-flow s5 priority=1,in_port=1,actions=output:3
+sudo ovs-ofctl add-flow s4 priority=1,in_port=3,actions=output:4
+
+sudo ovs-ofctl add-flow s4 priority=1,in_port=4,actions=output:2
+sudo ovs-ofctl add-flow s3 priority=1,in_port=2,actions=output:3
+sudo ovs-ofctl add-flow s5 priority=1,in_port=2,actions=output:1
+sudo ovs-ofctl add-flow s2 priority=1,in_port=3,actions=output:1
+sudo ovs-ofctl add-flow s1 priority=1,in_port=2,actions=output:1
+
+
+
+sudo ovs-ofctl add-flow s1 priority=2,in_port=1,tcp,tcp_dst=80,actions=output:3
+sudo ovs-ofctl add-flow s3 priority=2,in_port=1,tcp,tcp_dst=80,actions=output:2
+sudo ovs-ofctl add-flow s4 priority=2,in_port=2,tcp,tcp_dst=80,actions=output:4
+
+sudo ovs-ofctl add-flow s4 priority=2,in_port=4,tcp,tcp_src=80,actions=output:1
+sudo ovs-ofctl add-flow s2 priority=2,in_port=2,tcp,tcp_src=80,actions=output:1
+sudo ovs-ofctl add-flow s1 priority=2,in_port=2,tcp,tcp_src=80,actions=output:1
