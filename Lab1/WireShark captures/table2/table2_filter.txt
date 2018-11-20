@@ -1,0 +1,2 @@
+Dropbox only:
+(not ip.addr==104.16.99.29) and (not ip.addr==172.217.197.125)and (not ip.addr==128.122.0.71)and (not ip.addr==10.18.255.255)and (not ip.addr==224.0.0.251)and (not ip.addr==224.0.0.252)and ip and (not ip.addr==192.168.1.121) and (not ip.addr==13.78.177.144) and (not  ip.addr==162.125.34.137)and (not  ip.addr==128.122.0.11)and (not  ip.addr==52.165.170.112)and (not  ip.addr==23.221.49.251)and (not  ip.addr==255.255.255.255)
